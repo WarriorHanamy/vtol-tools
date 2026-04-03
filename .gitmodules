@@ -1,0 +1,3 @@
+[submodule "plotjuggler/px4_msgs"]
+	path = plotjuggler/px4_msgs
+	url = https://github.com/WarriorHanamy/px4_msgs_msg.git
