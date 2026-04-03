@@ -1,5 +1,5 @@
 DOCKER := docker
-PLATFORM := linux/amd64
+PLATFORM := linux/arm64
 IMAGE_PREFIX ?= vtol
 
 .PHONY: pj pj-push
