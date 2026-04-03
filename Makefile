@@ -5,7 +5,7 @@ IMAGE_SUFFIX ?= jetson
 
 PLOTJUGGLER_IMAGE := $(IMAGE_PREFIX)/plotjuggler-$(IMAGE_SUFFIX):latest
 
-.PHONY: docker-build-plotjuggler docker-build-all
+.PHONY: docker-build-plotjuggler
 
 docker-build-plotjuggler:
 	$(DOCKER) run --rm --privileged tonistiigi/binfmt --install arm64 || true
@@ -17,7 +17,3 @@ docker-build-plotjuggler:
 		plotjuggler
 
 docker-build-all: docker-build-plotjuggler
-
-# Alias targets
-plotjuggler: docker-build-plotjuggler
-all: docker-build-all
