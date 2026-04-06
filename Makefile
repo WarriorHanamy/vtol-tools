@@ -1,4 +1,5 @@
 DOCKER := docker
+DOCKER_TTY := $(shell tty -s && echo "-it" || echo "")
 PLATFORM := linux/amd64
 IMAGE_PREFIX ?= vtol
 IMAGE_SUFFIX ?= host
