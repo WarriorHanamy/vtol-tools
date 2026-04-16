@@ -23,7 +23,7 @@ RUN --mount=type=cache,target=${WS_DIR}/build \
     --mount=type=cache,target=${WS_DIR}/log \
     source /opt/ros/humble/setup.bash && \
     cd ${WS_DIR} && \
-    colcon build --packages-select px4_msgs --symlink-install
+    colcon build --packages-select px4_msgs
 
 COPY dockerfiles/ros_entrypoint.sh /ros_entrypoint.sh
 RUN chmod +x /ros_entrypoint.sh
